@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: boder-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid orange;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.x {
+  width: 20%;
+  border: 1px solid red;
+  height: 90vh;
+}
+
+.mainBlock {
+  width: 60%;
+  border: 1px solid blue;
+  height: 90vh;
+}
+
+.functionBlock {
+  width: 20%;
+  border: 1px solid green;
+  height: 90vh;
+}
+
+.inside-icon {
+  width: 100px;
+}
