@@ -4,36 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
     <title>air邮箱</title>
 </head>
 <body>
     <header>
         <h1>air邮箱</h1>
-        <input type="text">
-        <nav></nav>
     </header>
     <div class="container">
     <div class="x">
         <ul>
             <li>
-                <button>
+                <button id="writeButton">
+                    <span>🖋</span>
                 写信
                 </button>
             </li>
-            <li>收信箱</li>
             <li>
-                <iframe class="inside-icon" 
-                src="assets/send.svg"></iframe>
-                已发送</li>
-            <li>草稿</li>
+                <button id="receiveButton">
+                <span>📧</span>
+                收信箱
+                </button>
+            </li>
+            <li>
+                <button id="sendButton">
+                <span id="sendBox">
+                    <svg viewBox="0 0 1024 1024" 
+                    data-icon-name="sending" 
+                    class="x-icon icon-prefix" 
+                    style="width: 16px; height: 16px;">
+                    <g fill="currentColor">
+                        <path d="M930.51 3.51L46.98 449.61a32.7 32.7 0 004.86 60.37l749.13 237.48a32.73 32.73 0 0042-24.87L977.38 39.01a32.7 32.7 0 00-46.87-35.5zM908 81L789.95 681 132 472.55 908 81z"></path><path d="M881.23 53.79a29.71 29.71 0 0141.99-2.1 29.77 29.77 0 012.42 41.66l-.33.37-464.85 514v160.8l81.98-138.49a29.72 29.72 0 0140.31-10.68l.43.25a29.77 29.77 0 0110.67 40.34l-.25.42-131.76 222.6A32.7 32.7 0 01401 866.8V584.78l480.23-531z">
+
+                    </path></g></svg>
+                </span>
+                已发送
+                </button>
+            </li>
+            <li>
+                <button id="paperButton">
+                <span>📝</span>
+                草稿
+                </button>
+            </li>
         </ul>
     </div>
-    <div class="mainBlock"></div>
+    <div class="mainBlock">
+        <div class="writeLetter"
+            id="writeContent">
+            <div class="sendSave">
+            <button>
+            <svg viewBox="0 0 1024 1024" data-icon-name="sending" class="x-icon icon-prefix" style="width: 16px; height: 16px;"><g fill="currentColor"><path d="M930.51 3.51L46.98 449.61a32.7 32.7 0 004.86 60.37l749.13 237.48a32.73 32.73 0 0042-24.87L977.38 39.01a32.7 32.7 0 00-46.87-35.5zM908 81L789.95 681 132 472.55 908 81z"></path><path d="M881.23 53.79a29.71 29.71 0 0141.99-2.1 29.77 29.77 0 012.42 41.66l-.33.37-464.85 514v160.8l81.98-138.49a29.72 29.72 0 0140.31-10.68l.43.25a29.77 29.77 0 0110.67 40.34l-.25.42-131.76 222.6A32.7 32.7 0 01401 866.8V584.78l480.23-531z">
+
+            </path></g></svg>发送
+            </button>
+            <button>
+                存草稿
+            </button>
+            </div>
+            <input type="text" placeholder="收件人">
+            <input type="text" placeholder="主题">
+            <input type="text" placeholder="发件人">
+            <textarea class="TextWrapper" name="" id="" cols="30" rows="10">
+
+            </textarea>
+        </div>
+        <div class="receiveBox"
+            id="receiveContent">
+            收信箱
+        </div>
+        <div class="send"
+            id="sendContent">
+            已发送
+        </div>
+        <div class="paperT"
+            id="paperContent">
+            草稿
+        </div>
+    </div>
     <div class="functionBlock">
         <ul>
             <li>通讯录</li>
         </ul>
     </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
